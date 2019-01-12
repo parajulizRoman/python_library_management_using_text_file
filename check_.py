@@ -29,8 +29,8 @@ def user_input(userSelection):
             if userSelection in contents[i][j]:
                 return True,contents,i
             elif userSelection == 'EXIT':
-                #exit()
-                return False,None,None
+                exit()
+                
             elif userSelection == 'RETURN':
                 print('Go To Book Returning Process')
-                return False,None,None
+                
