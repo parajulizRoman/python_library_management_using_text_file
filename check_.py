@@ -1,9 +1,11 @@
 from read_ import*
 
-contents = list_2d()
+contents = (list_2d())
+#for i in range(4):
+#    print(contents[i][0])
 
 with open('user_details.txt','r') as ud:
-    users = ud.read()
+    users = ud.read()    
 
 def user_auth(userName):
     if userName in users:
@@ -22,15 +24,13 @@ def user_auth(userName):
             return False
     
 
-def user_input(userSelection):
+def user_input(userSelection): 
 
     for i in range (len(contents)):
         for j in range (len(contents)):
-            if userSelection in contents[i][j]:
+            if userSelection in contents[i][0]:
                 return True,contents,i
-            elif userSelection == 'EXIT':
-                exit()
-                
-            elif userSelection == 'RETURN':
-                print('Go To Book Returning Process')
-                
+    if userSelection == 'RETURN':
+        ret = 'RETURN'
+        return ret,contents,i
+            
