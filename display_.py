@@ -1,9 +1,10 @@
 def start_screen():
     with open('book_details.txt','r') as mf:
         print('BOOKS AVAILABLE TO BORROW\n')
-        contents = mf.read()
-        print(contents)
-    
+        file_contents = mf.read()
+        file_contents = file_contents.replace('[','').replace(']','')
+        #print(type(file_contents))
+        print(file_contents)
     
 
     
