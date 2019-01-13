@@ -1,15 +1,11 @@
-
 with open('book_details.txt','r') as mf:
     book_list = mf.read()
     lis = []
     lis.append(book_list)
-    #print(lis)
 
 
-def content_to_write(contents):
+def content_to_write(new_contents):
     with open('book_details.txt','w') as mf:
-        book_contents = (contents)
-        #print(book_contents)
-        mf.write(str(book_contents).replace(']','').replace('[',''))
-
+        for list_item in new_contents:
+            mf.write('%s\n'%list_item)
 
