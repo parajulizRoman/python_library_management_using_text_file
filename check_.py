@@ -28,9 +28,11 @@ def user_input(userSelection):
 
     for i in range (len(contents)):
         for j in range (len(contents)):
-            if userSelection in contents[i][0]:
+            if (userSelection in contents[i][0]):
                 return True,contents,i
     if userSelection == 'RETURN':
         ret = 'RETURN'
         return ret,contents,i
+    if userSelection == 'EXIT':
+        exit()
             
