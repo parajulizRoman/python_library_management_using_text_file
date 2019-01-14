@@ -3,8 +3,6 @@ from read_ import*
 from display_ import*
 from check_ import*
 from borrow_ import*
-from write_ import*
-from msg_ import*
 from return_ import*
 
 mainLoop = 'y'
@@ -35,14 +33,14 @@ while mainLoop == 'y':
         userName = get_user_name()
         isUserAvailable = user_auth(userName)
         if (isUserAvailable == True):
-            print("PROCEED Book RETURNING PROCESS\n")
+            print("PROCEED BOOK RETURNING PROCESS\n")
             new_return_contents,statusR = return_procress_(userSelection,contents,i)
             if statusR == True:
                 content_to_write(new_return_contents)
                 return_message_for_user(userName,userSelection)
                 print('SucessFully Returned')        
-    else:
-        print("SORRY, WE COULD NOT PROVIDE SERVICE YOU ASKED FOR\n")
+    elif (isBookAvailable == False):
+        print("\n\t\tSORRY, WE COULD NOT PROVIDE SERVICE YOU ASKED FOR\n")
         mainLoop == 'y'
 
     
